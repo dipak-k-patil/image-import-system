@@ -39,33 +39,39 @@ The system is designed to handle large-scale imports (10,000+ images) efficientl
     - **Note:** The S3 bucket must be configured for public read access for the images to be viewable in the frontend.
 3.  **Build and run the services using Docker Compose:**
 4.  # Example .env 
-       
-```PostgreSQL Database
+
+ **PostgreSQL Database
+```
 DATABASE_URL=postgresql://user:password@db:5432/images
 POSTGRES_USER=user
 POSTGRES_PASSWORD=password
 POSTGRES_DB=images
 ```
-```Redis
+**Redis
+```
 REDIS_URL=redis://redis:6379
 ```
-```AWS S3
+**AWS S3
+```
 S3_BUCKET_NAME=your-s3-bucket-name
 S3_AWS_ACCESS_KEY_ID=your-access-key-id
 S3_AWS_SECRET_ACCESS_KEY=your-secret-access-key
 ```
-```Google Drive API
+**Google Drive API
+```
 GOOGLE_API_KEY=your-google-api-key
 ```
-```Dropbox API
+**Dropbox API
+```
 DROPBOX_APP_KEY=your-dropbox-app-key
 DROPBOX_APP_SECRET=your-dropbox-app-secret
 DROPBOX_REFRESH_TOKEN=your-dropbox-refresh-token
 ```
-```Worker Configuration
+**Worker Configuration
+```
 WORKER_COUNT=10
 ```
-5.  
+5. **Docker Run Command
     ```bash
     docker compose up --build -d
     ```
