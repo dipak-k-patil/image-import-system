@@ -11,11 +11,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code
 COPY . .
 
-
-# copy shared common module
-COPY ../common ./common
-
-
 # Command to run the service
 CMD ["python", "main.py"]
 
